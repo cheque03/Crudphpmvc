@@ -1,4 +1,9 @@
-<table class="table table-bordered">
+<div class="card">
+  <div class="card-header">
+    <a class="btn btn-success" href="?controlador=empleados&accion=crear" role="button">Agregar Empleado</a>
+  </div>
+  <div class="card-body">
+   <table class="table table-bordered">
 	<thead>
 		<tr>
 			<th>
@@ -10,14 +15,22 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>1</td>
-			<td>
-			Ezequiel Ibarra
-		</td>
-		<td>cheque816@gmail.com</td>
-		<td>editar | borrar </td>
-		</tr>
+		<?php foreach ($empleados as $empleado) { ?>
+			<tr>
+				<td><?php echo $empleado->id; ?></td>
+				<td><?php echo $empleado->nombre; ?></td>
+				<td><?php echo $empleado->correo; ?></td>
+				<td>
+					<div class="btn-group" role="group">
+						<a href="?controlador=empleados&accion=editar&id=<?php echo $empleado->id; ?>" class="btn btn-info">Editar</a>
+						<a href="?controlador=empleados&accion=borrar&id=<?php echo $empleado->id; ?>" class="btn btn-danger">Borrar</a>
+					</div>
+				</td>
+			</tr>
+		<?php } ?>
 		
 	</tbody>
 </table>
+  </div>
+ 
+</div>
