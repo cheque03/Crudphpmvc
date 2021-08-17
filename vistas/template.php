@@ -18,8 +18,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="#">Sistema <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">Empleados</a>
+          <a class="nav-item nav-link" href="?controlador=paginas&accion=inicio">Home</a>
+          <a class="nav-item nav-link" href="?controlador=empleados&accion=inicio">Empleados</a>
           
         </div>
       </div>
@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2>Hola  Ezequiel soy tu CRUD</h2>
+          
           <?php include_once("ruteador.php"); ?>
         </div>
       </div>
