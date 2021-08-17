@@ -11,7 +11,6 @@
 				$opcionesPDO[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
 
 				self::$instancia = new PDO('mysql:host=localhost;dbname=empresa','cheque','y', $opcionesPDO);
-				echo "conexion realizada";
 			}
 
 			return self::$instancia;
